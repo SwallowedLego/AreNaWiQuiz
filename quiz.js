@@ -1,104 +1,254 @@
-// Quiz Fragen - Beispiel Fragen (kann erweitert werden)
+// Quiz Fragen - Bau des Auges und Funktion der Bestandteile
 const quizQuestions = [
     {
-        question: "Was ist die Hauptstadt von Deutschland?",
+        question: "Welche Struktur des Auges ist für die Brechung des Lichts hauptverantwortlich?",
         answers: [
-            "Berlin",
-            "München",
-            "Hamburg",
-            "Frankfurt"
+            "Die Hornhaut (Cornea)",
+            "Die Iris",
+            "Die Pupille",
+            "Die Netzhaut (Retina)"
         ],
         correct: 0
     },
     {
-        question: "Welches ist das größte Bundesland Deutschlands?",
+        question: "Was ist die Hauptfunktion der Linse im Auge?",
         answers: [
-            "Nordrhein-Westfalen",
-            "Bayern",
-            "Baden-Württemberg",
-            "Niedersachsen"
+            "Schutz des Auges vor Staub",
+            "Anpassung der Lichtmenge",
+            "Feinabstimmung der Brechkraft für scharfes Sehen",
+            "Umwandlung von Licht in elektrische Signale"
+        ],
+        correct: 2
+    },
+    {
+        question: "Welche Struktur enthält die Lichtsinneszellen (Stäbchen und Zapfen)?",
+        answers: [
+            "Die Lederhaut (Sklera)",
+            "Die Netzhaut (Retina)",
+            "Die Aderhaut (Choroidea)",
+            "Der Glaskörper"
         ],
         correct: 1
     },
     {
-        question: "In welchem Jahr fiel die Berliner Mauer?",
+        question: "Was ist die Funktion der Iris?",
         answers: [
-            "1987",
-            "1988",
-            "1989",
-            "1990"
-        ],
-        correct: 2
-    },
-    {
-        question: "Wie viele Bundesländer hat Deutschland?",
-        answers: [
-            "14",
-            "15",
-            "16",
-            "17"
-        ],
-        correct: 2
-    },
-    {
-        question: "Welcher Fluss fließt durch Berlin?",
-        answers: [
-            "Die Elbe",
-            "Die Spree",
-            "Der Rhein",
-            "Die Donau"
+            "Schutz vor mechanischen Verletzungen",
+            "Regelung der Lichtmenge durch Veränderung der Pupillengröße",
+            "Scharfstellen von nahen und fernen Objekten",
+            "Ernährung der Netzhaut mit Sauerstoff"
         ],
         correct: 1
     },
     {
-        question: "Was bedeutet 'Guten Tag' auf Englisch?",
+        question: "Welche Zellen in der Netzhaut sind für das Farbsehen verantwortlich?",
         answers: [
-            "Good Night",
-            "Good Morning",
-            "Good Day",
-            "Good Evening"
-        ],
-        correct: 2
-    },
-    {
-        question: "Welche Farben hat die deutsche Flagge?",
-        answers: [
-            "Rot, Weiß, Blau",
-            "Schwarz, Rot, Gold",
-            "Grün, Weiß, Rot",
-            "Blau, Weiß, Rot"
+            "Stäbchen",
+            "Zapfen",
+            "Ganglienzellen",
+            "Sinneszellen"
         ],
         correct: 1
     },
     {
-        question: "Wer schrieb 'Faust'?",
+        question: "Was ist der blinde Fleck?",
         answers: [
-            "Friedrich Schiller",
-            "Johann Wolfgang von Goethe",
-            "Heinrich Heine",
-            "Thomas Mann"
+            "Ein Bereich auf der Hornhaut ohne Durchsichtigkeit",
+            "Der Punkt, wo die Linse am dicksten ist",
+            "Die Stelle, wo der Sehnerv austritt und keine Sinneszellen vorhanden sind",
+            "Der dunkle Bereich in der Mitte der Pupille"
+        ],
+        correct: 2
+    },
+    {
+        question: "Welche Funktion hat der Glaskörper?",
+        answers: [
+            "Er filtert schädliche UV-Strahlen",
+            "Er gibt dem Auge seine Form und hält die Netzhaut an ihrem Platz",
+            "Er produziert Tränenflüssigkeit",
+            "Er leitet elektrische Signale zum Gehirn"
         ],
         correct: 1
     },
     {
-        question: "Welches ist das höchste Gebirge in Deutschland?",
+        question: "Welche Muskeln verändern die Form der Linse beim Sehen?",
         answers: [
-            "Der Schwarzwald",
-            "Das Erzgebirge",
-            "Die Alpen",
-            "Der Harz"
+            "Die äußeren Augenmuskeln",
+            "Die Iris-Muskeln",
+            "Die Ziliarmuskeln",
+            "Die Lider-Muskeln"
         ],
         correct: 2
     },
     {
-        question: "In welcher Stadt steht der Kölner Dom?",
+        question: "Was ist die Funktion der Lederhaut (Sklera)?",
         answers: [
-            "Düsseldorf",
-            "Bonn",
-            "Köln",
-            "Aachen"
+            "Sie gibt dem Auge Farbe",
+            "Sie schützt das Auge mechanisch und gibt ihm seine stabile Form",
+            "Sie nimmt Lichtstrahlen auf",
+            "Sie versorgt die Hornhaut mit Nährstoffen"
+        ],
+        correct: 1
+    },
+    {
+        question: "Was passiert mit der Pupille bei starker Helligkeit?",
+        answers: [
+            "Sie weitet sich (Mydriasis)",
+            "Sie verengt sich (Miosis)",
+            "Sie bleibt unverändert",
+            "Sie verschließt sich vollständig"
+        ],
+        correct: 1
+    },
+    {
+        question: "Welche Zellen sind für das Sehen bei Dunkelheit besonders wichtig?",
+        answers: [
+            "Zapfen",
+            "Stäbchen",
+            "Ganglienzellen",
+            "Bipolarzellen"
+        ],
+        correct: 1
+    },
+    {
+        question: "Was ist die Hauptfunktion der Hornhaut (Cornea)?",
+        answers: [
+            "Sie schützt das Auge und bricht das einfallende Licht",
+            "Sie reguliert die Lichtmenge",
+            "Sie wandelt Licht in Nervenimpulse um",
+            "Sie gibt dem Auge seine Farbe"
+        ],
+        correct: 0
+    },
+    {
+        question: "Wo im Auge entsteht das schärfste Bild?",
+        answers: [
+            "Auf der gesamten Netzhaut gleichmäßig",
+            "Im blinden Fleck",
+            "In der Fovea centralis (Sehgrube, gelber Fleck)",
+            "Am Rand der Netzhaut"
         ],
         correct: 2
+    },
+    {
+        question: "Welche Struktur versorgt die Netzhaut mit Nährstoffen und Sauerstoff?",
+        answers: [
+            "Die Lederhaut (Sklera)",
+            "Die Hornhaut (Cornea)",
+            "Die Aderhaut (Choroidea)",
+            "Der Glaskörper"
+        ],
+        correct: 2
+    },
+    {
+        question: "Was ist Akkommodation?",
+        answers: [
+            "Die Anpassung der Pupillengröße an die Helligkeit",
+            "Die Anpassung der Linsenform für scharfes Sehen in verschiedenen Entfernungen",
+            "Die Bewegung der Augen beim Lesen",
+            "Die Produktion von Tränenflüssigkeit"
+        ],
+        correct: 1
+    },
+    {
+        question: "Welcher Nerv leitet die visuellen Informationen vom Auge zum Gehirn?",
+        answers: [
+            "Der Hörnerv",
+            "Der Riechnerv",
+            "Der Sehnerv (Nervus opticus)",
+            "Der Gesichtsnerv"
+        ],
+        correct: 2
+    },
+    {
+        question: "Was ist die korrekte Reihenfolge der Lichtdurchdringung im Auge?",
+        answers: [
+            "Hornhaut → Linse → Glaskörper → Netzhaut",
+            "Linse → Hornhaut → Netzhaut → Glaskörper",
+            "Hornhaut → Glaskörper → Linse → Netzhaut",
+            "Pupille → Linse → Hornhaut → Netzhaut"
+        ],
+        correct: 0
+    },
+    {
+        question: "Wie viele Zapfen-Typen gibt es normalerweise beim Menschen für das Farbsehen?",
+        answers: [
+            "Zwei verschiedene Typen",
+            "Drei verschiedene Typen",
+            "Vier verschiedene Typen",
+            "Fünf verschiedene Typen"
+        ],
+        correct: 1
+    },
+    {
+        question: "Was ist Kurzsichtigkeit (Myopie)?",
+        answers: [
+            "Das Bild wird hinter der Netzhaut scharf",
+            "Das Bild wird vor der Netzhaut scharf",
+            "Die Linse ist zu flach",
+            "Die Pupille ist zu klein"
+        ],
+        correct: 1
+    },
+    {
+        question: "Welche Aussage über die äußeren Augenmuskeln ist richtig?",
+        answers: [
+            "Sie verändern die Form der Linse",
+            "Sie öffnen und schließen das Augenlid",
+            "Sie bewegen den Augapfel in verschiedene Richtungen",
+            "Sie regulieren die Pupillengröße"
+        ],
+        correct: 2
+    },
+    {
+        question: "Was enthält die vordere Augenkammer?",
+        answers: [
+            "Glaskörper",
+            "Kammerwasser",
+            "Tränenflüssigkeit",
+            "Blut"
+        ],
+        correct: 1
+    },
+    {
+        question: "Welche Struktur trennt die vordere von der hinteren Augenkammer?",
+        answers: [
+            "Die Hornhaut",
+            "Die Linse und Iris",
+            "Die Netzhaut",
+            "Die Lederhaut"
+        ],
+        correct: 1
+    },
+    {
+        question: "Was ist die Hauptfunktion der Tränenflüssigkeit?",
+        answers: [
+            "Lichtbrechung",
+            "Befeuchtung, Reinigung und Schutz der Hornhaut",
+            "Ernährung der Linse",
+            "Regelung des Augeninnendrucks"
+        ],
+        correct: 1
+    },
+    {
+        question: "Welche Farbe hat die Iris typischerweise?",
+        answers: [
+            "Immer braun",
+            "Immer blau",
+            "Sie kann verschiedene Farben haben (braun, grün, blau, etc.)",
+            "Immer schwarz"
+        ],
+        correct: 2
+    },
+    {
+        question: "Was bedeutet der Begriff 'Adaptation' im Zusammenhang mit dem Auge?",
+        answers: [
+            "Die Bewegung des Auges",
+            "Die Anpassung der Sehfähigkeit an unterschiedliche Lichtverhältnisse",
+            "Die Formveränderung der Linse",
+            "Die Produktion von Tränen"
+        ],
+        correct: 1
     }
 ];
 
