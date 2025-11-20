@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - AreNaWiQuiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Willkommen zum Quiz</h1>
+        </header>
+
+        <div id="quiz-container" class="quiz-box">
+            <div id="question-container">
+                <h2 id="question-text"></h2>
+                <div id="answers" class="answers"></div>
+            </div>
+            
+            <div class="navigation">
+                <button id="prev-btn" class="btn btn-secondary" disabled>Zurück</button>
+                <span id="question-counter"></span>
+                <button id="next-btn" class="btn btn-primary">Weiter</button>
+            </div>
+        </div>
+
+        <div id="result-container" class="result-box hidden">
+            <h2>Quiz Abgeschlossen!</h2>
+            <div class="result-content">
+                <p class="score">Ihre Punktzahl: <span id="score"></span></p>
+                <p class="grade">Ihre Note: <span id="grade"></span></p>
+                <div id="grade-description"></div>
+            </div>
+            <button id="restart-btn" class="btn btn-primary">Neu starten</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
